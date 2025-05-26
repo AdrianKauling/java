@@ -1,0 +1,8 @@
+1 - Para trabalhar com o JDBC em java, primeiramente devemos baixar o conector referente ao SGBD que iremos usar. No meu exemplo é o MYSQL.
+  https://dev.mysql.com/downloads/connector/j/
+
+Baixar o arquivo e extrair.
+
+
+
+2 - Importar o conector para dentro no editor de código, no meu caso é o ECLIPSE.

@@ -3,6 +3,37 @@
 
 Baixar o arquivo e extrair.
 
+# O EXEMPO USA O MYSQL COMO REFERENCIA.
 
+Dentro da pasta extraida estará um arquivo com final .jar
+  Exemplo: mysql-connector-j-9.3.0.jar
+
+Esse arquivo deve ser importado para dentro do projeto java
 
 2 - Importar o conector para dentro no editor de código, no meu caso é o ECLIPSE.
+
+  Video de refencia que pode ajudar: https://www.youtube.com/watch?v=aMkj2LcvM7A
+
+3 - Agora vamos implementar a classe que fará a conexão com o Banco de Dados
+```
+package databaseTest;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ConexaoDB {
+	public static Connection createConnection() throws SQLException{
+		String url = "jdbc:mysql://localhost:3306/testesqljava"; //Nome da base de dados
+		String user = "root"; //nome do usuário do MySQL
+		String password = "suasenha"; //senha do MySQL
+
+		Connection conexao = null;
+		conexao = DriverManager.getConnection(url, user, password);
+
+		return conexao;
+	}
+
+}
+```
